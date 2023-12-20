@@ -1,4 +1,12 @@
-/** */
+/**O código usa as bibliotecas bip32, bip39 e bitcoinjs-lib para criar uma carteira HD (Hierarchical Deterministic) e derivar um endereço Bitcoin a partir dela.
+
+O código define a rede como testnet (bitcoin.networks.testnet), o que significa que os endereços gerados serão para a rede de teste do Bitcoin.
+
+O caminho de derivação usado é m/49'/1'/0'/0, que é comumente usado para endereços Pay-to-Witness-Public-Key-Hash (p2wpkh) em P2SH (pay-to-script-hash) na testnet do Bitcoin.
+
+O código gera um mnemônico aleatório, converte-o em uma semente (seed) e, em seguida, cria uma árvore de derivação HD a partir dessa semente.
+
+O endereço Bitcoin, a chave privada e o mnemônico são exibidos no console. */
 
 // Importando as dependências
 const bip32 = require('bip32');
